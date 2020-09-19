@@ -1,0 +1,104 @@
+//- Color
+@dark: #051622;
+@highlight: #1BA098;
+@light: #DEB992;
+
+//- Fonts
+@font-face { font-family: Montserrat;  src: url("/fonts/Montserrat.otf");  }
+@font-face { font-family: RobotoSlab;  src: url("/fonts/RobotoSlab.ttf");  }
+
+//- Generic 
+* { padding: 0; margin: 0; }
+body { background-color: @dark; font-family: Montserrat; overflow-x: hidden; color: white;}
+
+//- 
+nav {
+
+    width: 100vw;
+    background-color: darken(@dark, 2%);
+    position: fixed;
+    top: 0;
+    height: 75px;
+    box-shadow:0px 10px 3px darken(@dark, 2%);
+
+    ul {
+        margin-top:25px;
+        list-style: none;
+        overflow: hidden;
+
+        width: 70vw;
+        margin-left: auto;
+        margin-right: auto;
+
+        li { 
+            width: 14vw;
+            float: left; 
+            height: 30px; 
+            a {
+                display: block;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                font-size: 20px;
+            }
+            a:hover { 
+                text-decoration: underline; 
+                color: @highlight;
+                transition-duration: 0.2s;
+            }
+        }
+    }
+}
+
+
+.content-wrapper {
+
+    margin-top: 100px;
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.about-me, .interest-in-it, .ideal-job, .personal-profile, .project-porposal {
+    padding-top:  100px;
+}
+
+.about-me {
+
+    h2 { color: @highlight; }
+    hr { color: @highlight; border-color: @highlight; width: 115px; margin-bottom: 25px;}
+
+    .about-me-left {
+        width: 35vw; 
+        float: left;
+
+        img {
+            display: block;
+            width: 20vw; height: auto;
+            margin-right: auto; margin-left: auto;
+        }
+
+        p {
+            padding-top: 5px;
+        }
+    }
+    .about-me-right{
+        padding-top: 50px;
+        width: 45vw;
+        float: left;
+        
+        .my-education {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        
+            p { padding-top: 5px; }
+        }
+    } 
+
+    span {
+        text-decoration: underline;
+        color: @light;
+    }
+
+}
