@@ -9,7 +9,9 @@
 
 //- Generic 
 * { padding: 0; margin: 0; }
+html { scroll-behavior: smooth; }
 body { background-color: @dark; font-family: Montserrat; overflow-x: hidden; color: white;}
+::-webkit-scrollbar { display: none; }
 
 //- 
 nav {
@@ -54,38 +56,43 @@ nav {
 .content-wrapper {
 
     margin-top: 100px;
-    width: 80vw;
+    width: 70vw;
     margin-left: auto;
     margin-right: auto;
 
 }
 
-.about-me, .interest-in-it, .ideal-job, .personal-profile, .project-porposal {
+.about-me, .interest-in-it, .ideal-job, .personal-profile, .project-proposal {
     padding-top:  100px;
 }
 
 .about-me {
 
+    height: 510px;
+
     h2 { color: @highlight; }
     hr { color: @highlight; border-color: @highlight; width: 115px; margin-bottom: 25px;}
 
     .about-me-left {
-        width: 35vw; 
+        width: 30vw; 
         float: left;
 
         img {
             display: block;
-            width: 20vw; height: auto;
+            width: 15vw; height: auto;
             margin-right: auto; margin-left: auto;
+            margin-bottom: 20px; margin-top: 20px;
         }
 
         p {
             padding-top: 5px;
+
+            text-align: center;
         }
     }
     .about-me-right{
         padding-top: 50px;
-        width: 45vw;
+        width: 40vw;
         float: left;
         
         .my-education {
@@ -101,4 +108,80 @@ nav {
         color: @light;
     }
 
+}
+
+.interest-in-it {
+ 
+    h2 { color: @highlight; }
+    hr { color: @highlight; border-color: @highlight; width: 190px; margin-bottom: 25px;}
+
+    p {
+        margin-top: 20px;
+    }
+}
+
+.ideal-job {
+
+    height: 410px; 
+
+    h2 { color: @highlight; }
+    hr { color: @highlight; border-color: @highlight; width: 150px; margin-bottom: 25px;}
+
+    .job-left {
+        width: 40vw; 
+        float: left;
+
+        p {
+            padding-top: 5px;
+        }
+    }
+    .job-right{
+        padding-top: 0;
+        width: 30vw;
+        float: left;
+
+        img {
+            display: block;
+            width: 25vw; height: auto;
+            margin-right: auto; margin-left: auto;
+            margin-bottom: 20px; margin-top: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: @highlight;
+            p {text-align: center;}
+        }
+
+        a:hover { text-decoration: underline; color: @light; transition-duration: 0.2s; }
+    } 
+}
+
+.personal-profile {
+    h2 { color: @highlight; }
+    hr { color: @highlight; border-color: @highlight; width: 215px; margin-bottom: 25px; }
+
+    .test { margin-top: 25px; 
+        p { padding-top: 5px; }
+    }
+
+    a {
+        text-decoration: none;
+        color: @highlight;
+    }
+
+    h3 { color: @light; }
+    a:hover { text-decoration: underline; color: @light; transition-duration: 0.2s; }
+}
+
+.project-proposal {
+
+    margin-bottom: 100px;
+
+    h2 { color: @highlight; }
+    hr { color: @highlight; border-color: @highlight; width: 770px; margin-bottom: 25px;}
+
+    h3 { color: @light; }
+
+    div { margin-top: 25px;  p{ padding-top: 5px; }}
 }
